@@ -1,0 +1,64 @@
+OPOS - THE OPEN SOURCE OPERATING SYSTEM
+=======================================
+- Vivek Mohan 	(mailvivek27@sify.com || opendev@phreaker.net)
+		(http://www.geocities.com/cppresources/)
+- Project Home  (http://opos.t35.com/)(Under Construction)
+
+
+			!!! IMPORTANT !!!
+			=================
+IF BOOTABLE.EXE IS NOT IN THE PACKAGE....
+
+YOU MUST DOWNLOAD THE UTILITY BOOTABLE.EXE , which writes a boot sector without destroying the FAT. You can download it here... 
+
+		http://www.geocities.com/freeware/bootable.zip
+
+
+What is OPOS ?
+==============
+
+Well , Ummmm I'd like to call it an Operating System , but I don't think OPOS really fits into the definition , for now , although it is kinda the first step towards what I hope would be an excellent OS.
+
+What does OPOS's first version include ?
+========================================
+
+OPOS's first version includes a boot loader , pre-compiled. If you want the source code to the boot loader you can download it from the OPOS home page. This version however focuses more on the kernel stuff than boot sector. The boot sctor has not been written by me and I don't plan to do so until and unless the whole project is finished.This version of OPOS includes a small shell called the $tupid $hell which des "nothing".
+
+How Do I Install OPOS   ?
+=========================
+
+The Package Includes Both the source code as well as the compiled binary files. 
+
+1. Compiling the source code :
+
+	OPOS has been written in turbo c 2.0(1.1mb) , which is freely available from
+		
+		http://community.borland.com/museum/
+
+	But you must register (for free).
+
+	All you have to do is type the following into the command prompt
+
+	tcc -mt -lt main.c
+	
+	This will output a com file "MAIN.COM"
+
+	Rename it to STARTUP.BIN ,(Which has been included in the package)
+
+2. Installing OPOS In a floppy
+
+	Take a floppy. Make sure it is formatted. Now use the utility bootable.exe
+	
+	bootable.exe boot12.bin a: ("This is in the bin directory")
+
+	which will copy the boot sector code into the floppy's sector 1.
+
+	Now do the following
+
+	copy startup.bin a:\ ("This is in  bin directory ")
+
+3. Thats it , all you have to do is restart  , if you had done everyting correctly, you'll see OPOS.
+
+Thanx ....please send your feedback to mailvivek27@sify.com. Sorry about the spelling mistakes and the grammatical errors , its 3 am and I'm feeling real sleepy.
+
+Goodnight.. I mean bYe..

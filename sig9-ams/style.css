@@ -1,0 +1,100 @@
+
+#navbarmenu {
+  font-family: verdana,sans-serif;
+  font-size:12px;
+  margin-left:4px;
+}
+
+#navbarsubmenu , #navbarsubmenu td{
+  font-family: verdana,sans-serif;
+  font-size:12px;
+  margin-left:12px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.boxmenu, .boxmenu td{
+  font-family: verdana,sans-serif;
+  font-size:12px; 
+  margin-left:12px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+#sidebar h2 {
+  background: green;
+  color: white;
+  font-family: verdana, sans-serif, verdana;
+  font-size: 17px;
+  padding: 3px;
+  padding-left: 10px;
+  border: 1px solid #ccc;
+  margin: 2px;
+}
+
+#contentbar h2 {
+  background: #990001;
+  color: white;
+  font-family: verdana,sans-serif;
+  font-size: 17px;
+  padding: 3px;
+  padding-left: 10px;
+  border: 1px solid #ccc;
+  margin: 2px;
+}
+
+#contentbar {
+  border: 1px solid #ccc;
+}
+
+#contentbox {
+  font-family: verdana,sans-serif;
+  font-size: 12px;
+  padding: 3px;
+  padding-left: 10px;
+
+  margin: 2px;
+}
+
+#sidebar h3 {
+  font-family: verdana, sans-serif;
+  font-size: 14px;
+  padding: 3px;
+  padding-left: 10px;
+  border: 1px solid #ccc;
+  margin: 2px;
+}
+
+h1 {
+
+}
+
+body {
+  margin-top: 0px;
+  margin-left: 0px;
+  font-size: 12px;
+}
+
+#navbar {
+  font-family: verdana, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+#navbarheading {
+  font-family: verdana, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.box {
+  font-family: verdana, sans-serif;
+  font-size: 12px;
+  font-weight: thin;
+}
+
+.boxheading {
+
+  font-family: verdana, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+}

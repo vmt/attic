@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<bin tasks="6">
+	<task>
+		<name>console</name>
+		<file>/usr/home/vivek/temp/mini-proj/current/tasks/console</file>
+	</task>
+	<task>
+		<name>basic</name>
+		<file>/usr/home/vivek/temp/mini-proj/current/tasks/basic</file>
+	</task>
+	<task>
+		<name>master</name>
+		<file>/usr/home/vivek/temp/mini-proj/current/tasks/master</file>
+	</task>
+	<task>
+		<name>slave</name>
+		<file>/usr/home/vivek/temp/mini-proj/current/tasks/slave</file>
+	</task>
+	<task>
+		<name>frac-master</name>
+		<file>/usr/home/vivek/temp/mini-proj/current/tasks/frac-master</file>
+	</task>
+	<task>
+		<name>frac-slave</name>
+		<file>/usr/home/vivek/temp/mini-proj/current/tasks/frac-slave</file>
+	</task>
+</bin>

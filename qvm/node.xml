@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<vm nodes="4">
+	<name>My_VM</name>
+	<node hostname="amd.localhost" port="9000"></node>
+	<node hostname="amd.localhost" port="9001"></node>
+	<node hostname="amd.localhost" port="9002"></node>
+	<node hostname="amd.localhost" port="9003"></node>
+</vm>

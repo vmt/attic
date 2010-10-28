@@ -1,0 +1,119 @@
+-------------------------------------------------------------------------------
+The Problem 
+
+Computationally expensive tasks.
+Processing power.
+Cost.
+
+-------------------------------------------------------------------------------
+Possible Solutions
+
+* Super computers, Multi-processing systems.
+
+-------------------------------------------------------------------------------
+Project Proposal
+
+* To utilise a local area network and the workstations as a cluster in a non
+  non-dedicated manner.
+
+-------------------------------------------------------------------------------
+
+Basic Idea
+
+* Create a virtual machine comprising of the workstations in the lan
+* To create a complete, network unaware abstraction for parallel programs to work
+  together.
+* To use underlying protocols to implement communication between 
+  the workstations.
+* Leave the parallel programming to the developers.
+
+-------------------------------------------------------------------------------
+
+Design
+
+* Divided into two parts
+	* The virtual machine abstration and the communication protocols
+	* The API for the developer
+
+-------------------------------------------------------------------------------
+
+		The Virtual Machine Abstraction
+
+-------------------------------------------------------------------------------
+
+Packet Object: Basic Data Transmission Unit
+
+* Fixed Size. Composed of a Header and a buffer.
+	* Reduced system call latency.
+	* More network efficiency.
+	* More memory allocation efficiency.
+	* Allocated through Global Heap.
+* Is the core object beneath the stream api.
+* Extensive use of function overloading for packing different types of data.
+
+-------------------------------------------------------------------------------
+
+Authenticator : The Base Object
+
+* Queuer for incoming connections.
+* Abstract object for authentication mechanisms of the system.
+* Objects, VirtualMachineServer and VirtualNodeSocket inherit the Authenticator.
+* All incoming connections are handed over to this object.
+* Polymorphism - Uses virtual functions to callback on the derived object's
+  authentication function.
+
+-------------------------------------------------------------------------------
+
+Virtual Machine Server : The Virtual Machine Core
+
+* Standalone program.
+* Maintains info on the vm structure.
+* Serves requests from Nodes
+	* Activating/Deactivating nodes
+	* Allocation of nodes to spawn requests
+* Inherits the Authenticator object.
+* Uses TCP for communicating with nodes.
+
+-------------------------------------------------------------------------------
+
+Virtual Node Socket : The Message Router
+
+* Inherits the Authenticator.
+* The basic communication interface for a node.
+* Maintains queues, inbound and outbound.
+* Polymorphism: Uses virtual functions to callback derived object packet
+  processor.
+* Uses TCP for communicate with peers and the server.
+
+-------------------------------------------------------------------------------
+
+Virtual Node Server : The Message Router/Task Manager
+
+* Is a standalone program.
+* Extends the Node socket, by inheriting Virtual Node Socket object.
+* Handles packet routing to and from tasks and peer nodes.
+* Manages local tasks.
+* Inventory of local task images.
+
+-------------------------------------------------------------------------------
+
+		The API - QVMLIB
+
+-------------------------------------------------------------------------------
+
+
+	Strong Typing - to preserve data integrity and support heterogeneity.
+
+
+-------------------------------------------------------------------------------
+
+Objects in the api
+
+* qtaskid object- identifies a task in the system
+* qpacket       - The packet object.
+* qtask         - The object associated with the task.
+* qstatus       - Special node-task and task-task control message objects
+* qeventhandler - Status messages are recvd as events. This object is the handler.
+* qstream       - Stream Abstraction for the packet interface.
+
+-------------------------------------------------------------------------------
